@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aojie.dal.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.aojie.dal.entity.Order">
+            <id property="orderId" column="order_id" jdbcType="BIGINT"/>
+            <result property="orderType" column="order_type" jdbcType="VARCHAR"/>
+            <result property="customId" column="custom_id" jdbcType="BIGINT"/>
+            <result property="amount" column="amount" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,order_type,custom_id,
+        amount
+    </sql>
+</mapper>
